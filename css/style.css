@@ -185,6 +185,7 @@ nav {
     right: 0;
     animation: circl 7s infinite linear;
     white-space: nowrap;
+    z-index: -1;
 }
 
 
@@ -289,7 +290,9 @@ nav {
 .i1 h3 {
     margin-bottom: 30px;
 }
-
+.zakaz {
+    z-index: 1;
+}
 
 
 
