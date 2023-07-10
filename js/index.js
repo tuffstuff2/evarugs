@@ -27,7 +27,7 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
-section_1.onclick = () => {
+burger_menu.onclick = () => {
     section_1.classList.toggle('open')
 }
 
