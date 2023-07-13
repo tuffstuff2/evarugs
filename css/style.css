@@ -32,12 +32,16 @@ textarea {
 /* Хедер */
 header {
     background: linear-gradient(224deg, rgba(46, 49, 146, 0.70) 0%, rgba(212, 20, 90, 0.70) 100%);
+    position: fixed;
+    width: 100%;
+    z-index: 2;
 }
 
 .hed_flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
+   
 }
 
 
@@ -47,6 +51,7 @@ header {
     flex-wrap: wrap;
     align-items: center;
     gap: 10px;
+   
 }
 
 .nav_item a {
@@ -82,11 +87,14 @@ select {
 
 
 /* 1 секчия */
+
+
 .logos {
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
+    padding-top: 60px;
 }
 
 .logo {
@@ -113,7 +121,7 @@ select {
     color: #737373;
     font-size: 18px;
 }
-   
+
 
 .logo_text ul li a {
     text-decoration: none;
@@ -122,9 +130,9 @@ select {
 }
 
 .logo_text ul li a:hover {
-   text-decoration: underline;
+    text-decoration: underline;
     color: rgb(95, 57, 178);
-    
+
 }
 
 .burger_menu {
@@ -448,7 +456,7 @@ h2 span {
     padding-top: 30px;
     gap: 50px;
     margin-bottom: 245px;
-   
+
 }
 
 
@@ -483,13 +491,13 @@ h2 span {
 }
 
 .flex_3_item:hover {
-    box-shadow: 0px 0px 20px 5px  #cd69e8;
-   transform: scale(1.05);
+    box-shadow: 0px 0px 20px 5px #cd69e8;
+    transform: scale(1.05);
     color: #cd69e8;
 }
-    
 
-  
+
+
 
 .img_3_0 {
     z-index: -1;
@@ -523,88 +531,36 @@ h2 span {
 /* 4 секция */
 .section_4 {
     background: linear-gradient(142deg, rgba(212, 20, 90, 0.25) 0%, rgba(46, 49, 146, 0.25) 100%);
-    padding: 40px 0;
     display: flex;
     justify-content: center;
-
-    overflow: hidden;
-
-}
-
-.carousel {
-    position: relative;
-    width: 688px;
-    padding: 10px 40px 60px;
-    background: none;
-}
-
-.carousel img {
-    width: 130px;
-    height: 130px;
-    display: block;
-}
-
-
-.arrow {
-    position: absolute;
-    bottom: -20px;
-    padding: 0;
-    background: none;
-    border-radius: 15px;
-    border: none;
-    font-size: 24px;
-    color: #444;
-    display: block;
-    z-index: 1;
-}
-
-.arrow:focus {
-    outline: none;
-}
-
-.prev {
-    left: 0px;
-}
-
-.next {
-    right: 0px;
-}
-
-.gallery {
-    width: 390px;
+    align-items: center;
     padding: 20px 0;
 }
 
-.gallery ul {
-    height: 130px;
-    width: 9999px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    transition: margin-left 500ms;
-    font-size: 0;
-    display: flex;
-    gap: 50px;
+
+.swiper {
+    width: 500px;
+    height: 300px;
+    
 }
 
-.com {
+
+swiper-slide {
     position: relative;
-    width: 536px;
-    height: 187px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     background-color: white;
     border-radius: 9px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
-
+    height: 230px;
+    margin-top: 40px;
+   
 }
 
-.com img {
+swiper-slide img {
     position: absolute;
-    left: -60px;
-    top: -80px;
+    top: -60px;
+    width: 22%;
 }
 
 .coment {
@@ -613,6 +569,7 @@ h2 span {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     line-height: normal;
     padding: 20px 50px 0;
+    margin-top: 60px;
 }
 
 hr {
@@ -623,7 +580,17 @@ hr {
 
 }
 
+
+
 /*  */
+
+
+
+
+
+
+
+
 
 
 
@@ -686,7 +653,7 @@ hr {
 
 @media(max-width: 1200px) {
     .container {
-        width: 100%;
+        max-width: 100%;
         padding: 0 20px;
     }
 }
@@ -791,7 +758,10 @@ hr {
 
 
 @media(max-width: 768px) {
-
+    .logos {
+        padding-top: 0px;
+    }
+       
     .logo_text {
         position: fixed;
         right: -45%;
@@ -826,6 +796,9 @@ hr {
 
     .section_1 {
         background: linear-gradient(224deg, rgba(46, 49, 146, 0.70) 0%, rgba(212, 20, 90, 0.70) 100%);
+        position: fixed;
+        width: 100%;
+        z-index: 2;
     }
 
     .logo {
@@ -893,47 +866,7 @@ hr {
         padding-top: 20px;
     }
 
-    .carousel {
-        position: static;
-        width: auto;
-        padding: 10px 40px 60px;
-        background: none;
-    }
-
-    .com {
-        position: '';
-        width: auto;
-        height: 187px;
-        background-color: white;
-        border-radius: 9px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
-    }
-
-    .gallery ul {
-        height: auto;
-        width: 536px;
-        margin: 1px;
-        padding: 1px;
-
-        display: grid;
-        justify-content: center;
-        gap: 50px;
-    }
-
-    .gallery {
-        width: auto;
-        padding: 20px 0;
-        display: flex;
-        justify-content: center;
-    }
-
-    .arrow {
-        display: none;
-    }
+    
 }
 
 
@@ -1024,17 +957,7 @@ hr {
         display: none;
     }
 
-    .coment {
-        text-align: center;
-        font-size: 11px;
-        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-        line-height: normal;
-        padding: 0 10px;
-    }
-
-    .gallery ul {
-        width: auto;
-    }
+    
 
     .flex_3 {
         display: flex;
@@ -1042,15 +965,30 @@ hr {
         padding-top: 30px;
         gap: 50px;
         margin-bottom: 125px;
-
     }
+
 
     .back {
         width: 100%;
         right: 0;
     }
+    .swiper {
+        width: auto;
+        height: 300px;
+    }
+    .coment {
+        margin-top: 50px; 
+        font-size: 16px;
+    } 
 
+    swiper-slide img {
+        position: absolute;
+        top: -70px;
+        width: auto;
+    }
 }
+       
+
 
 
 
@@ -1075,7 +1013,22 @@ hr {
         font-size: 26px;
     }
 
+    .coment {
+        text-align: center;
+        font-size: 14px;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        line-height: normal;
+        padding: 20px 40px 0;
+       
+    }
+
+    .swiper {
+        height: auto;
+    }
 }
+      
+        
+
 
 
 

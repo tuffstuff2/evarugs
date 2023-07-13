@@ -18,7 +18,7 @@ otp_btn.onclick = () => {
     body.style.overflow = ''
 }
 
-document.addEventListener('keydown', function (e) {
+d.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
         subscribe.style.display = 'none'
         modal.style.display = 'none'
@@ -31,37 +31,12 @@ burger_menu.onclick = () => {
     section_1.classList.toggle('open')
 }
 
-let i = 1;
-for (let li of carousel.querySelectorAll('li')) {
-    li.style.position = 'relative';
-    li.insertAdjacentHTML('beforeend', `<span style="position:absolute;left:0;top:0">${i}</span>`);
-    i++;
-}
+
+  AOS.init();
 
 
-let width = 536;
-let count = 1;
+  
 
-let list = carousel.querySelector('ul');
-let listElems = carousel.querySelectorAll('li');
-
-let position = 0;
-
-carousel.querySelector('.prev').onclick = function () {
-
-    position += width * count;
-
-    position = Math.min(position, 0)
-    list.style.marginLeft = position + 'px';
-};
-
-carousel.querySelector('.next').onclick = function () {
-
-    position -= width * count;
-
-    position = Math.max(position, -width * (listElems.length - count));
-    list.style.marginLeft = position + 'px';
-};
 
 
 
