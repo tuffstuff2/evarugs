@@ -35,8 +35,7 @@ burger_menu.onclick = () => {
   AOS.init();
 
 
-  
-
+ 
 
 
 
