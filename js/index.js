@@ -35,7 +35,11 @@ burger_menu.onclick = () => {
   AOS.init();
 
 
- 
+  dragula([
+    document.querySelector(".foot_grid"),
+    document.querySelector(".flex_3"),
+]);
+
 
 
 
