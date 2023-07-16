@@ -6,13 +6,14 @@ let zakaz = d.querySelector('.zakaz')
 let burger_menu = d.querySelector('.burger_menu')
 let section_1 = d.querySelector('.section_1')
 let otp_btn = d.querySelector('.otp_btn')
+let modal_close = d.querySelector('.modal_close')
 zakaz.onclick = () => {
     subscribe.style.display = 'flex'
     modal.style.display = 'grid'
     body.style.overflow = 'hidden'
 }
 
-otp_btn.onclick = () => {
+modal_close.onclick = () => {
     subscribe.style.display = 'none'
     modal.style.display = 'none'
     body.style.overflow = ''
@@ -37,7 +38,7 @@ burger_menu.onclick = () => {
 
   dragula([
     document.querySelector(".foot_grid"),
-    document.querySelector(".flex_3"),
+   
 ]);
 
 

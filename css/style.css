@@ -25,7 +25,10 @@ textarea {
     resize: none;
 }
 
+.zakaz:hover {
+    background: linear-gradient(224deg, rgba(15, 7, 240, 0.923) 0%, rgba(237, 8, 134, 0.984) 100%);
 
+}
 
 
 
@@ -280,6 +283,7 @@ select {
     width: 179px;
     height: 53px;
     border-radius: 7px;
+    transition: 0.5s;
     cursor: pointer;
     border: none;
     font-weight: 900;
@@ -355,7 +359,9 @@ select {
     background: linear-gradient(136deg, #B90160 0%, #2E3192 100%);
     font-size: 20px
 }
-
+.modal button:hover {
+    background: linear-gradient(224deg, rgba(15, 7, 240, 0.923) 0%, rgba(237, 8, 134, 0.984) 100%);
+}
 .otp {
     display: flex;
     justify-content: center;
@@ -370,13 +376,25 @@ select {
     z-index: 1;
 }
 
-
-
+.modal_close {
+    position: absolute;
+    right: 5%;
+  cursor: pointer;
+  transition: 0.5s;
+  width: 35px;
+}
+.modal_close:hover {
+    
+    transform: scale(1.2);
+    background-color: #dbace8;
+    border-radius: 50%;
+}
 .modal_0 {
     position: absolute;
     left: 0;
     bottom: 0;
     width: 15%;
+    z-index: -1;
 }
 
 .modal_1 {
@@ -384,6 +402,7 @@ select {
     left: 15%;
     bottom: 0;
     width: 13%;
+    z-index: -1;
 }
 
 .modal_2 {
@@ -391,6 +410,7 @@ select {
     right: 0;
     top: 0;
     width: 15%;
+    z-index: -1;
 }
 
 .modal_3 {
@@ -399,6 +419,7 @@ select {
     top: 0;
     width: 10%;
     animation: circl 7s infinite linear;
+    z-index: -1;
 }
 
 .modal_4 {
@@ -407,6 +428,7 @@ select {
     top: 0;
     width: 13%;
     animation: circl 7s infinite linear;
+    z-index: -1;
 }
 
 .modal_5 {
@@ -415,6 +437,7 @@ select {
     bottom: 10%;
     width: 13%;
     animation: circl 7s infinite linear;
+    z-index: -1;
 }
 
 .flex_3 {
@@ -601,10 +624,10 @@ hr {
 /* 5 секция */
 .foot_grid {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     position: relative;
     padding-bottom: 100px;
-    gap: 181px;
+   
 }
 
 .foot_item a {
